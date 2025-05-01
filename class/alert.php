@@ -17,4 +17,10 @@ class Alert
             self::PrintMessage("Done creating your account", 'success');//استخدمت self علشان انا واقفة في كلاس الاليرت نفسه
         }
     }
+
+    public function AlertAfterupload(){
+        if(isset($_GET['doneupload'])){
+            alert::PrintMessage("Done Uploaded Your Photo","success");
+        }
+    }
 }

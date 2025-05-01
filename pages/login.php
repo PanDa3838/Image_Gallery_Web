@@ -1,9 +1,13 @@
 <?php
 require_once("../vendor/autoload.php");
+
+use App\Alert;
 use App\Authenticate;
 $authObj = new Authenticate();
+(new Alert())-> alertAfterSignUp();
 $authObj->login();
 $authObj->redirectIfAuth();
+$authObj -> logout();
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +40,7 @@ $authObj->redirectIfAuth();
         </div>
         <button name="logInBtn" type="submit" class= "btn btn-primary w-100">Login</button>
         <p class="text-center mt-3">
-          Don't have an account? <a href="signup.html">Sign up</a>
+          Don't have an account? <a href="signup.php">Sign up</a>
         </p>
       </form>
     </div>

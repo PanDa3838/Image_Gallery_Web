@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 30, 2025 at 03:41 PM
+-- Generation Time: May 01, 2025 at 07:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -35,6 +35,22 @@ CREATE TABLE `image_gallery` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `image_gallery`
+--
+
+INSERT INTO `image_gallery` (`Image_ID`, `Title`, `File_Name`, `Uploaded_At`, `user_id`) VALUES
+(1, 'coverpagedb', 'coverpage.jpg', '2025-04-30 14:48:41', 3),
+(2, 'coverpagedb', 'coverpage.jpg', '2025-04-30 14:54:05', 3),
+(3, 'myphoto', '2.jpg', '2025-04-30 14:56:08', 3),
+(4, 'myphoto', '2.jpg', '2025-04-30 14:59:48', 3),
+(5, 'testimage', '2.jpg', '2025-04-30 15:29:06', 3),
+(6, 'karimphoto', 'photo_2025-02-10_11-14-46.jpg', '2025-04-30 16:18:58', 5),
+(7, 'karimphoto', 'photo_2025-02-10_11-14-46.jpg', '2025-04-30 16:22:08', 6),
+(8, 'ramadan', 'images.jpeg', '2025-04-30 16:22:25', 6),
+(9, 'MYDAY', 'photo_2025-02-10_11-14-46.jpg', '2025-05-01 16:41:48', 7),
+(10, 'ssnimage', 'WhatsApp Image 2025-03-17 at 21.18.46_370806ff.jpg', '2025-05-01 16:42:46', 7);
+
 -- --------------------------------------------------------
 
 --
@@ -54,7 +70,10 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`user_id`, `username`, `email`, `password`) VALUES
 (3, 'Karim_Mersal', 'k-h-m99@hotmail.com', '$2y$10$daBpyBLBUzJYKPqr6U3DTexUDKduvGOipbX1N1VERjB1/m6NtEH56'),
-(4, 'yasmin Awod', 'yasmin@gmail.com', '$2y$10$v42DW4j69.vzbgDgzg83GeX4NIUX/7oGQIr5suPqcHr5IM9Pz3hky');
+(4, 'yasmin Awod', 'yasmin@gmail.com', '$2y$10$v42DW4j69.vzbgDgzg83GeX4NIUX/7oGQIr5suPqcHr5IM9Pz3hky'),
+(5, 'Karim_Hossam', 'karimmersal2004@gmail.com', '$2y$10$ZjgBVbrcSQXEVJybBpw5auJtOlZidUWgrePxtgFl7QkBuh6Z6XSkC'),
+(6, 'KarimMersal', 'karimmersal20@gmail.com', '$2y$10$u2nBR3jZYY4eAeSJd5/qEuAMuthETfD4kbJUnTbBs7ZxQibubR2/2'),
+(7, 'karimHossamElDin', 'karimmersal@gmail.com', '$2y$10$GW0MURXtWv/TbKja4K0Tp.aSKcXPaMpoeK/GclvHLtZ.l0yoQAli.');
 
 --
 -- Indexes for dumped tables
@@ -82,13 +101,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `image_gallery`
 --
 ALTER TABLE `image_gallery`
-  MODIFY `Image_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Image_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

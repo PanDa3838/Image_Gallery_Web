@@ -1,3 +1,16 @@
+<?php
+require_once("../vendor/autoload.php");
+
+use App\Alert;
+use App\authenticate;
+use App\image;
+
+$authobj = new Authenticate();
+$imageobj = new image();
+$imageobj -> uploadimage();
+$authobj -> logout();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +28,7 @@
 <div class="container d-flex align-items-center justify-content-center vh-100">
   <div class="form-card w-100" style="max-width: 500px;">
     <h2 class="text-center mb-4">Upload New Image</h2>
-    <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <form action="upload.php" method="POST" enctype="multipart/form-data"> <!-- use enctype="multipart/form-data" for image -->
       <div class="mb-3">
         <label>Image Title</label>
         <input type="text" name="title" class="form-control" required>
@@ -24,7 +37,7 @@
         <label>Select Image</label>
         <input type="file" name="image" class="form-control" accept="image/*" required>
       </div>
-      <button class="btn btn-primary w-100" type="submit">Upload</button>
+      <button class="btn btn-primary w-100" type="submit" name ="upload-img">Upload</button>
     </form>
   </div>
 </div>

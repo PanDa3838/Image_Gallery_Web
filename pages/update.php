@@ -1,3 +1,12 @@
+<?php
+require_once('../vendor/autoload.php');
+use App\Authenticate;
+
+$authobj = new Authenticate();
+$authobj -> redirectIfNotAuth();
+$authobj -> logout();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

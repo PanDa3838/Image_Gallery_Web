@@ -6,13 +6,13 @@ class Authenticate
 {
     public function isAuth()
     {
-        return isset($_SESSION['user_id']); // bool
+        return isset($_SESSION['userID']); 
     }
 
     public function redirectIfNotAuth()
     {
         if (!$this->isAuth())
-            header('location: SignIn.php');
+            header('location: login.php');
     }
 
     public function redirectIfAuth()
@@ -75,7 +75,7 @@ public function login() {
                 if (password_verify($password, $rowArr["password"])) {
                     $_SESSION['userID'] = $rowArr["user_id"];
                     $_SESSION['userName'] = $rowArr["username"];
-                    // Alert::PrintMessage("Hello, " . $rowArr['username'], 'Normal');
+                    //Alert::PrintMessage("Hello, " . $rowArr['username'], 'Normal');
                     header("location:index.php");
                 } else {
                     Alert::PrintMessage('Wrong password', 'Danger');
@@ -86,4 +86,11 @@ public function login() {
         }
     }
 }
+public function logout(){
+    if(isset($_GET['logout'])){
+        session_unset();
+        session_destroy();
+        header('location:login.php');
+    }
+    }
 }
