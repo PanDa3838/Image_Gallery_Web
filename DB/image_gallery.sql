@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2025 at 07:46 PM
+-- Generation Time: May 01, 2025 at 10:44 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,16 +40,14 @@ CREATE TABLE `image_gallery` (
 --
 
 INSERT INTO `image_gallery` (`Image_ID`, `Title`, `File_Name`, `Uploaded_At`, `user_id`) VALUES
-(1, 'coverpagedb', 'coverpage.jpg', '2025-04-30 14:48:41', 3),
-(2, 'coverpagedb', 'coverpage.jpg', '2025-04-30 14:54:05', 3),
-(3, 'myphoto', '2.jpg', '2025-04-30 14:56:08', 3),
-(4, 'myphoto', '2.jpg', '2025-04-30 14:59:48', 3),
-(5, 'testimage', '2.jpg', '2025-04-30 15:29:06', 3),
-(6, 'karimphoto', 'photo_2025-02-10_11-14-46.jpg', '2025-04-30 16:18:58', 5),
-(7, 'karimphoto', 'photo_2025-02-10_11-14-46.jpg', '2025-04-30 16:22:08', 6),
-(8, 'ramadan', 'images.jpeg', '2025-04-30 16:22:25', 6),
-(9, 'MYDAY', 'photo_2025-02-10_11-14-46.jpg', '2025-05-01 16:41:48', 7),
-(10, 'ssnimage', 'WhatsApp Image 2025-03-17 at 21.18.46_370806ff.jpg', '2025-05-01 16:42:46', 7);
+(1, '1', 'first.jpg', '2025-05-01 19:24:53', 4),
+(2, '2', 'second.jpg', '2025-05-01 19:25:08', 4),
+(3, '3', 'third.jpg', '2025-05-01 19:25:16', 4),
+(4, '4', '4.jpg', '2025-05-01 19:25:25', 4),
+(5, '5', '5.jpg', '2025-05-01 19:25:32', 4),
+(6, '6', '6.jpg', '2025-05-01 19:35:05', 4),
+(7, '7', '7.jpg', '2025-05-01 19:35:13', 4),
+(8, '8', '8.jpg', '2025-05-01 19:35:21', 4);
 
 -- --------------------------------------------------------
 
@@ -101,7 +99,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `image_gallery`
 --
 ALTER TABLE `image_gallery`
-  MODIFY `Image_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `Image_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user`
