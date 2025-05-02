@@ -35,20 +35,18 @@ class image{
     }
 
     public function deleteimage(){
-        if (isset($_POST['delbtn'])){
-            $image_id = $_POST['image_id'];
-            $myobjdb = new DB();
-            $deletestat = "DELETE FROM `image_gallery` WHERE Image_ID = ?";
-            $querydeletestat = $myobjdb->Connection->prepare($deletestat);
-            $querydeletestat->bind_param('i', $image_id);
-            $querystatus = $querydeletestat->execute();
-            if($querystatus){
-                header("location:viewimage.php?donedelete=$image_id");
+        if (isset($_POST["delbtn"])){
+            $image_id= $_POST["image_id"];
+            $myobjdb= new DB();
+            $deletestatment='DELETE FROM `image_gallery` WHERE Image_ID = ? ';
+            $querystmtobj=$myobjdb->Connection->prepare($deletestatment);
+            $querystmtobj->bind_param('i',$image_id);
+            $checkquery= $querystmtobj->execute();
+            if ($checkquery){
+                header('location:viewimage.php?DoneDelete='.$image_id);
             }else{
-                Alert::PrintMessage("Failed to Delete Image #".$image_id , "Danger");
+                Alert::PrintMessage("Failed To Delete Image #".$image_id,"Danger");
             }
             }
-            
     }
 }
-?>

@@ -24,8 +24,8 @@ class Alert
         }
     }
     public static function AlertAfterdelete(){
-        if(isset($_GET['donedelete'])){
-            $id = $_GET['donedelete'];
+        if(isset($_GET['DoneDelete'])){
+            $id = $_GET['DoneDelete'];
             Alert::PrintMessage("Done Delete Image #$id" , "success");
         }
     }

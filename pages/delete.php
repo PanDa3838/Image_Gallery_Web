@@ -10,8 +10,8 @@ $authobj = new authenticate();
 $authobj -> redirectIfNotAuth();
 $authobj-> logout();
 
-$imageobj = new image();
-$imageobj -> deleteimage();
+$Imgobj=new image();
+$Imgobj->DeleteImage();
 
 ?>
 <!DOCTYPE html>
