@@ -34,7 +34,7 @@ Alert::AlertAfterdelete();
 
 <div class="container py-5">
   <div class="row g-4">
-    <?php foreach($allimages as $image): ?> <!-- loop for each image uploaded -->
+    <?php foreach($allimages as $image): ?> <!-- loop for each image uploaded foreach run like fetch_assoc()-->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
       <div class="gallery-card">
         <div class="image-wrapper">
