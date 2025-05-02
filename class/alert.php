@@ -18,9 +18,16 @@ class Alert
         }
     }
 
-    public function AlertAfterupload(){
+    public  static function AlertAfterupload(){
         if(isset($_GET['doneupload'])){
             alert::PrintMessage("Done Uploaded Your Photo","success");
         }
     }
+    public static function AlertAfterdelete(){
+        if(isset($_GET['donedelete'])){
+            $id = $_GET['donedelete'];
+            Alert::PrintMessage("Done Delete Image #$id" , "success");
+        }
+    }
+
 }

@@ -34,7 +34,7 @@ class Authenticate
             if ($password != $confirmPassword)
                 \App\Alert::PrintMessage("Confirm Password not matched", 'Danger');
             else {
-                $myDatabaseObj = new \App\DB();
+                $myDatabaseObj = new DB();
                 $insertStatement = "INSERT INTO `user` VALUES(NULL,?,?,?)"; // Sql injection
                 $queryObj = $myDatabaseObj->Connection->prepare($insertStatement);
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);

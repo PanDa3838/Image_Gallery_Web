@@ -11,10 +11,11 @@ $alertobj->AlertAfterupload();
 
 $imageobj = new image();
 $allimages = $imageobj->getimage();
-
 $authobj = new authenticate();
 $authobj->redirectIfNotAuth();
 $authobj->logout();
+
+$alertobj-> AlertAfterdelete();
 ?>
 
 <!DOCTYPE html>

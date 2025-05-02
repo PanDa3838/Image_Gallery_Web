@@ -1,10 +1,18 @@
 <?php
 require_once('../vendor/autoload.php');
+
+use App\Alert;
 use App\authenticate;
+use App\DB;
+use App\image;
 
 $authobj = new authenticate();
 $authobj -> redirectIfNotAuth();
 $authobj-> logout();
+
+$imageobj = new image();
+$imageobj -> deleteimage();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +35,7 @@ $authobj-> logout();
         <label>Image ID</label>
         <input type="number" name="image_id" class="form-control" required>
       </div>
-      <button class="btn btn-danger w-100" type="submit">Delete Image</button>
+      <button class="btn btn-danger w-100" type="submit" name ="delbtn">Delete Image</button>
     </form>
   </div>
 </div>
