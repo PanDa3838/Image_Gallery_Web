@@ -5,8 +5,7 @@ use App\authenticate;
 use App\DB;
 use App\image;
 
-$alertobj = new Alert();
-$alertobj-> AlertAfterupload();
+Alert::AlertAfterupload();
 
 $imageobj = new image();
 $allimages = $imageobj -> getimage();
