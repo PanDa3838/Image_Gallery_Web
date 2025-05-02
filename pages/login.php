@@ -29,7 +29,7 @@ $authObj -> logout();
   <div class="container d-flex align-items-center justify-content-center vh-100">
     <div class="login-card w-100" style="max-width: 400px;">
       <h2 class="text-center mb-4">Login</h2>
-      <form action="login.php" method="POST">
+      <form method="POST">
         <div class="mb-3">
           <label>Email address</label>
           <input type="email" name="email" class="form-control" required>

@@ -25,7 +25,7 @@
 <div class="signup-card w-100" style="max-width: 450px;">
   
     <h2 class="text-center mb-4">Create Account</h2>
-      <form action="signup.php" method="POST">
+      <form method="POST">
       <div class="mb-3">
         <label>Username</label>
         <input type="text" name="username" class="form-control" required>

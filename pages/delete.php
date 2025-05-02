@@ -30,7 +30,7 @@ $imageobj -> deleteimage();
 <div class="container d-flex align-items-center justify-content-center vh-100">
   <div class="form-card w-100" style="max-width: 500px;">
     <h2 class="text-center mb-4">Delete Image</h2>
-    <form action="delete.php" method="POST">
+    <form method="POST">
       <div class="mb-3">
         <label>Image ID</label>
         <input type="number" name="image_id" class="form-control" required>

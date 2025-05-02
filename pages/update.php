@@ -25,7 +25,7 @@ $authobj -> logout();
 <div class="container d-flex align-items-center justify-content-center vh-100">
   <div class="form-card w-100" style="max-width: 500px;">
     <h2 class="text-center mb-4">Update Image Info</h2>
-    <form action="update.php" method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data">
       <div class="mb-3">
         <label>Image ID</label>
         <input type="number" name="image_id" class="form-control" required>
