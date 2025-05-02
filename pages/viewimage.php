@@ -1,13 +1,12 @@
 <?php
 require_once('../vendor/autoload.php');
 
-use \App\alert;
+use \App\Alert;
 use App\authenticate;
 use App\DB;
 use App\image;
 
-$alertobj = new alert();
-$alertobj->AlertAfterupload();
+Alert::AlertAfterupload();
 
 $imageobj = new image();
 $allimages = $imageobj->getimage();
@@ -15,7 +14,7 @@ $authobj = new authenticate();
 $authobj->redirectIfNotAuth();
 $authobj->logout();
 
-$alertobj-> AlertAfterdelete();
+Alert::AlertAfterdelete();
 ?>
 
 <!DOCTYPE html>

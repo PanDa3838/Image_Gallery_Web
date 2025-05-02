@@ -4,7 +4,7 @@ require_once("../vendor/autoload.php");
 use App\Alert;
 use App\Authenticate;
 $authObj = new Authenticate();
-(new Alert())-> alertAfterSignUp();
+Alert::alertAfterSignUp();
 $authObj->login();
 $authObj->redirectIfAuth();
 $authObj -> logout();
