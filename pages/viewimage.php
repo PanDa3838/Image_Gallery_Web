@@ -10,6 +10,7 @@ Alert::AlertAfterupload();
 
 $imageobj = new image();
 $allimages = $imageobj->getimage();
+
 $authobj = new authenticate();
 $authobj->redirectIfNotAuth();
 $authobj->logout();
@@ -33,10 +34,13 @@ Alert::AlertAfterdelete();
 
 <div class="container py-5">
   <div class="row g-4">
-    <?php foreach($allimages as $image): ?>
+    <?php foreach($allimages as $image): ?> <!-- loop for each image uploaded -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
       <div class="gallery-card">
         <div class="image-wrapper">
+          <!-- htmlspecialchars for security 
+          Access of image_Gallery Table => File_Name , Title , Image_ID by use $image[''] 
+          -->
           <img 
             src="uploads/<?= htmlspecialchars($image['File_Name'])?>" 
             class="gallery-img" 
