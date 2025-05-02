@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  }
+  .form-card {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  }
+  .form-control, .btn {
+    border-radius: 10px;
+  }

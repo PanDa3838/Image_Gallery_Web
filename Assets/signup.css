@@ -1,0 +1,191 @@
+body {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+.signup-card {
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+.form-control, .btn {
+  border-radius: 10px;
+}
+/* body {
+  background: url("img/1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+ */
+/* Navbar */
+/* .navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 25px;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+} */
+
+/* Flex Layout */
+/* .custom-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+} */
+
+/* Text on left */
+/* .info-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.styled-text {
+  font-weight: bold;
+  font-size: 1.9rem;
+  color: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  top: 13%; 
+  left: 5%; 
+  transform: none;
+  overflow-x: hidden;
+  white-space: normal;
+}
+
+.styled-text button {
+  margin-top: 15px;
+}
+
+
+.brand-name {
+  color: rgb(255, 119, 0); 
+} */
+
+/* Signup Card */
+/* .signup-card {
+  border-radius: 20px;
+  background-color: #000;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px; 
+  position: absolute;
+  top: 50%; 
+  right: 10px; 
+  left: auto; 
+  transform: translateY(-50%); 
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.3);
+  color: white;
+} */
+/* Header inside the card */
+/* .signup-header {
+  background-color: white;
+  color: rgb(255, 119, 0);
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+} */
+
+/* Labels and inputs */
+/* label {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+} */
+
+/* .form-control {
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(255, 119, 0);
+  border-radius: 0;
+  color: white;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: rgb(255, 119, 0);
+  background: transparent;
+  color: white;
+}
+
+.form-highlight {
+  box-shadow: 0 0 20px 5px rgb(255, 183, 0); 
+  transition: box-shadow 0.4s ease-in-out;
+} */
+
+
+/* Buttons */
+/* .btn-warning {
+  background-color: rgb(255, 119, 0);
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 12px 25px;
+}
+
+.btn-warning:hover {
+  background-color: rgb(255, 183, 0);
+} */
+
+/* Links */
+/* a {
+  color: rgb(255, 119, 0);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+ */
+/* Social Icons */
+/* .social-icon {
+  color: white;
+  background-color: #111;
+  padding: 14px 18px;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: 0.3s;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.social-icon:hover {
+  background-color: orange;
+  color: black;
+} */
+
+/* Footer */
+/* .footer {
+  background-color: #000;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  font-size: 1.2rem;
+  color: rgb(255, 119, 0);
+  margin: 0;
+} */
