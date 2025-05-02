@@ -4,7 +4,7 @@
       <a class="navbar-brand" href="index.php">Image Gallery</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <?php if((new \App\Authenticate())->isAuth()): ?>
+          <?php if((new \App\Authenticate())->isAuth()): ?> <!-- return boolean -->
           <li class="nav-item"><a class="nav-link" href="viewimage.php">My Gallery</a></li>
           <li class = "nav-item"><a class ="nav-link" href="Upload.php">Upload</a> </li>
           <li class = "nav-item"><a class ="nav-link" href="update.php">update</a> </li>
