@@ -34,6 +34,36 @@ class image{
         return $resultobj;
     }
 
+    
+    public function getimgbyid($image_id){
+        $selectstat = 'SELECT * FROM `image_gallery` where Image_ID = ? ';
+        $dbobj = new DB();
+        $queryobj = $dbobj ->Connection->prepare($selectstat);
+        $queryobj -> bind_param('i' , $image_id);
+        $queryobj -> execute();
+        return ($queryobj->get_result())->fetch_assoc();
+    }
+    public function updateimage(){
+        if (isset($_POST['btn_update_image'])){
+        $image_id= $_POST["image_id"];
+        $title = $_POST['new_title'];
+        $updateimage = $_FILES['new_image']['name'];
+        $tmp_name = $_FILES['new_image']['tmp_name'];
+        $upload_dir = 'uploads/'.$updateimage;  // direction to put the images 
+        $updatestat = 'UPDATE  `image_gallery`set File_Name= ? , Title = ? where Image_ID = ? ';
+        $dbobj = new DB();
+        $queryobj = $dbobj ->Connection->prepare($updatestat);
+        $queryobj -> bind_param('ssi' ,$updateimage, $title, $image_id);
+        $checkquery = $queryobj -> execute();
+        if ($checkquery){
+            move_uploaded_file($tmp_name, $upload_dir); // move image from temp location to upload folder
+            header('location:viewimage.php');}
+        else{
+            Alert::PrintMessage("Failed to update Image " , "Danger");
+        }
+    }
+}
+
     public function deleteimage(){
         if (isset($_POST["delbtn"])){
             $image_id= $_POST["image_id"];
@@ -49,4 +79,5 @@ class image{
             }
             }
     }
+
 }
