@@ -26,9 +26,6 @@ $authobj -> logout();
 
 
 
-<!-- this for Authentication 
-علشان المستخدم الغير مصرح ليه ميقدرس يعدل على الصوره لازم يكون هو هو نفس اليوز ب الايميل بتاعه-->
-
 <?php
 if (empty($_GET['image_id'])){
     Alert::PrintMessage("cannot access this page","danger");
