@@ -65,8 +65,8 @@ class image{
 }
 
     public function deleteimage(){
-        if (isset($_POST["delbtn"])){
-            $image_id= $_POST["image_id"];
+        if (isset($_GET["delete"])){
+            $image_id= $_GET["delete"];
             $myobjdb= new DB();
             $deletestatment='DELETE FROM `image_gallery` WHERE Image_ID = ? ';
             $querystmtobj=$myobjdb->Connection->prepare($deletestatment);
@@ -74,6 +74,7 @@ class image{
             $checkquery= $querystmtobj->execute();
             if ($checkquery){
                 header('location:viewimage.php?DoneDelete='.$image_id);
+                exit();
             }else{
                 Alert::PrintMessage("Failed To Delete Image #".$image_id,"Danger");
             }

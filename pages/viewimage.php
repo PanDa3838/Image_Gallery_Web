@@ -6,16 +6,21 @@ use App\authenticate;
 use App\DB;
 use App\image;
 
-Alert::AlertAfterupload();
+$alertobj = new Alert();
+
+$alertobj -> AlertAfterupload();
 
 $imageobj = new image();
 $allimages = $imageobj->getimage();
+
+$imageobj-> deleteimage();
+$alertobj-> AlertAfterdelete();
 
 $authobj = new authenticate();
 $authobj->redirectIfNotAuth();
 $authobj->logout();
 
-Alert::AlertAfterdelete();
+
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +58,7 @@ Alert::AlertAfterdelete();
             </span>
             <div class="action-icons">
               <a href="update.php?image_id=<?= $image['Image_ID'] ?>" title="Edit"><i class="fas fa-edit"></i></a>
-              <a href="delete.php?image_id=<?= $image['Image_ID'] ?>" title="Delete"><i class="fas fa-trash-alt"></i></a>
+              <a href="viewimage.php?delete=<?= $image['Image_ID']?>" title="Delete"><i class="fas fa-trash-alt"></i></a>
             </div>
           </div>
         </div>
