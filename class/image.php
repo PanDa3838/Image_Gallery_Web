@@ -18,7 +18,7 @@ class image{
                 move_uploaded_file($tmp_name, $upload_dir); // move image from temp location to upload folder
                 header('location:viewimage.php?doneupload=1');
             }else{
-                alert::PrintMessage('Failed To Upload' , 'Danger');
+                alert::PrintMessage('Failed To Upload Image' , 'Danger');
             }
         }
     }

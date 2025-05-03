@@ -14,13 +14,13 @@ class Alert
     public static function alertAfterSignUp()
     {
         if (isset($_GET["doneSignUp"])) {
-            self::PrintMessage("Done creating your account", 'success');//استخدمت self علشان انا واقفة في كلاس الاليرت نفسه
+            Alert::PrintMessage("Done Create your account", 'success');
         }
     }
 
     public  static function AlertAfterupload(){
         if(isset($_GET['doneupload'])){
-            alert::PrintMessage("Done Uploaded Your Photo","success");
+            Alert::PrintMessage("Done Uploaded Your Photo","success");
         }
     }
     public static function AlertAfterdelete(){
