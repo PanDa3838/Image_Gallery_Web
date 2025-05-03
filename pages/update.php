@@ -27,6 +27,9 @@ $authobj -> logout();
 
 
 <?php
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Project-IA/pages/Layout/navbar.php';
+
 if (empty($_GET['image_id'])){
     Alert::PrintMessage("cannot access this page","danger");
     exit();
@@ -37,8 +40,6 @@ $image_id = $_GET['image_id'];
 $imageObject = new image();
 
 $imageoUpdateArr = $imageObject->getimgById($image_id);
-
-require_once $_SERVER['DOCUMENT_ROOT'] . '/Project-IA/pages/Layout/navbar.php';
 
 $imageObject->updateimage();
 
