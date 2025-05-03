@@ -10,22 +10,7 @@ $authobj = new Authenticate();
 $authobj -> redirectIfNotAuth();
 $authobj -> logout();
 
-
-//$authobj = new Authenticate();
-//$imageobj = new image();
-//$imageobj -> uploadimage();
-//$authobj -> logout();
-
 ?>
-
-
-
-<!-- in the viweimage for udate page (update icon) -->
-<!-- <a href="update.php? image_id=
-?php echo $image['Image_ID'] ?>" title="Edit"><i class="fas fa-edit"></i></a> -->
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
