@@ -17,7 +17,6 @@ class Authenticate
 
     public function redirectIfAuth()
     {
-        // Used in page SignIn & SignUp
         if ($this->isAuth())
             header('location: index.php');
     }
@@ -26,7 +25,6 @@ class Authenticate
     {
       
         if (isset($_POST['signUpBtn'])) {
-            //var_dump($_POST);
             $username = $_POST['username'];
             $email = $_POST['email']; //
             $password = $_POST['password'];
@@ -35,7 +33,7 @@ class Authenticate
                 \App\Alert::PrintMessage("Confirm Password not matched", 'Danger');
             else {
                 $myDatabaseObj = new DB();
-                $insertStatement = "INSERT INTO `user` VALUES(NULL,?,?,?)"; // Sql injection
+                $insertStatement = "INSERT INTO `user` VALUES(NULL,?,?,?)";
                 $queryObj = $myDatabaseObj->Connection->prepare($insertStatement);
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                 $queryObj->bind_param('sss', $username, $email, $hashedPassword);
@@ -75,7 +73,6 @@ public function login() {
                 if (password_verify($password, $rowArr["password"])) {
                     $_SESSION['userID'] = $rowArr["user_id"];
                     $_SESSION['userName'] = $rowArr["username"];
-                    //Alert::PrintMessage("Hello, " . $rowArr['username'], 'Normal');
                     header("location:index.php");
                 } else {
                     Alert::PrintMessage('Wrong password', 'Danger');

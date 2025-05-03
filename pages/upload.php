@@ -28,7 +28,7 @@ $authobj -> logout();
 <div class="container d-flex align-items-center justify-content-center vh-100">
   <div class="form-card w-100" style="max-width: 500px;">
     <h2 class="text-center mb-4">Upload New Image</h2>
-    <form method="POST" enctype="multipart/form-data"> <!-- use enctype="multipart/form-data" for image -->
+    <form method="POST" enctype="multipart/form-data">
       <div class="mb-3">
         <label>Image Title</label>
         <input type="text" name="title" class="form-control" required>
