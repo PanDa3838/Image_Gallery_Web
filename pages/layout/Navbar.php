@@ -7,7 +7,7 @@
           <?php if((new \App\Authenticate())->isAuth()): ?> <!-- return boolean -->
           <li class="nav-item"><a class="nav-link" href="viewimage.php">My Gallery</a></li>
           <li class = "nav-item"><a class ="nav-link" href="Upload.php">Upload</a> </li>
-          <li class="nav-item"><a style="color: red" class="nav-link" href="index.php?logout=1">Logout</a></li>
+          <li class="nav-item"><a style="color: red" class="nav-link" href="home.php?logout=1">Logout</a></li>
           <?php else: ?>
           <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
           <li class="nav-item"><a class="nav-link" href="signup.php">Sign Up</a></li>

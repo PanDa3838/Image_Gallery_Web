@@ -18,7 +18,7 @@ class Authenticate
     public function redirectIfAuth()
     {
         if ($this->isAuth())
-            header('location: index.php');
+            header('location: home.php');
     }
 
     public function signUp()
@@ -73,7 +73,7 @@ public function login() {
                 if (password_verify($password, $rowArr["password"])) {
                     $_SESSION['userID'] = $rowArr["user_id"];
                     $_SESSION['userName'] = $rowArr["username"];
-                    header("location:index.php");
+                    header("location:home.php");
                 } else {
                     Alert::PrintMessage('Wrong password', 'Danger');
                 }
