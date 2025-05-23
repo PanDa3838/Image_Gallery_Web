@@ -5,7 +5,7 @@
   $authObj->signUp();
   $authObj->redirectIfAuth();
 ?>
-
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>

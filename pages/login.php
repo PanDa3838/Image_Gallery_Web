@@ -9,7 +9,7 @@ $authObj->login();
 $authObj->redirectIfAuth();
 $authObj -> logout();
 ?>
-
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>

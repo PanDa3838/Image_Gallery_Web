@@ -7,7 +7,7 @@ use App\DB;
 use App\image;
 
 $alertobj = new Alert();
-
+  
 $alertobj -> AlertAfterupload();
 
 $imageobj = new image();

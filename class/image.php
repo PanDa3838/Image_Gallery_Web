@@ -1,7 +1,7 @@
 <?php 
 namespace App;
 class image{
-
+    
     public function uploadimage(){
         if(isset($_POST["upload-img"])){
             $title = $_POST['title'];

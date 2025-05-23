@@ -5,7 +5,7 @@ use App\Alert;
 use App\authenticate;
 use App\DB;
 use App\image;
-
+  
 $authobj = new authenticate();
 $authobj -> redirectIfNotAuth();
 $authobj-> logout();

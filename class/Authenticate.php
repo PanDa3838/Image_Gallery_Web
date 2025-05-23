@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+    
 class Authenticate
 {
     public function isAuth()

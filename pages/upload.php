@@ -9,7 +9,7 @@ $authobj = new Authenticate();
 $imageobj = new image();
 $imageobj -> uploadimage();
 $authobj -> logout();
-
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">

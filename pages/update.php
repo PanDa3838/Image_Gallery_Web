@@ -5,7 +5,7 @@ use App\Authenticate;
 use App\image;
 
 require_once('../vendor/autoload.php');
-
+    
 $authobj = new Authenticate();
 $authobj -> redirectIfNotAuth();
 $authobj -> logout();

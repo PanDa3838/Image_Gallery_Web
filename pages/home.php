@@ -6,7 +6,7 @@ use App\DB;
 use App\image;
 
 Alert::AlertAfterupload();
-
+  
 $imageobj = new image();
 $allimages = $imageobj -> getimage();
 

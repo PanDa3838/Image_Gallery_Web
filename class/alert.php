@@ -1,6 +1,6 @@
 <?php
 namespace App;
-
+    
 class Alert
 {
     public static function PrintMessage($text, $type)
